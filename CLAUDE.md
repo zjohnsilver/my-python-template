@@ -10,7 +10,7 @@ every change. Every new target gets a `## description` so `make` lists it.
 
 ## Stack
 
-- Python 3.13 (`.python-version`), `requires-python >= 3.12`
+- Python 3.14 (`.python-version`, `requires-python >= 3.14`)
 - uv for dependencies (`uv add`, `uv add --dev`), hatchling build backend
 - pydantic-settings for configuration (`src/core/core_config.py`)
 - ruff (lint + format, line length 100), mypy over `src/`, pytest, pre-commit

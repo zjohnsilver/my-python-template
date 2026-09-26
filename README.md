@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white">
   <img alt="uv"     src="https://img.shields.io/badge/uv-managed-DE5FE9?logo=uv&logoColor=white">
   <img alt="Ruff"   src="https://img.shields.io/badge/Ruff-lint%20%2B%20format-D7FF64?logo=ruff&logoColor=black">
   <img alt="pytest" src="https://img.shields.io/badge/pytest-9-0A9EDC?logo=pytest&logoColor=white">
