@@ -5,15 +5,8 @@ created from it should rewrite this file with its own purpose, stack and domain.
 
 ## Commands
 
-Always use the Makefile targets.
-
-| Command | What it does |
-|---|---|
-| `make local/setup` | Creates `.env` from `env.example`, `uv sync`, installs the pre-commit hook |
-| `make local/start` | Runs `src/main.py` |
-| `make tests` | Runs pytest |
-| `make lint/check` | ruff check + ruff format --check + mypy |
-| `make lint/format` | Sorts imports and formats with ruff |
+Always use the Makefile targets; `make` lists them. Run `make tests` and `make lint/check` after
+every change. Every new target gets a `## description` so `make` lists it.
 
 ## Stack
 

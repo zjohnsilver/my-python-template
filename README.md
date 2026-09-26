@@ -1,56 +1,52 @@
-# 🐍 my-python-template
+<h1 align="center">my-python-template</h1>
 
-![Python](https://img.shields.io/badge/python-3.13%2B-3776AB?logo=python&logoColor=white)
-![uv](https://img.shields.io/badge/uv-managed-DE5FE9?logo=uv&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green)
+<p align="center">
+  <em>A minimal Python project: <code>src/</code> and <code>tests/</code>, no web framework, no database.</em>
+  <br>
+  <em>Start here for scripts, CLIs and libraries; for an API, use my-fastapi-template.</em>
+</p>
 
-A minimal Python project template: `src/` and `tests/`, managed by uv, linted by ruff and mypy,
-tested with pytest. No web framework, no database. Start here for scripts, CLIs and libraries;
-for an API, use [my-fastapi-template](https://github.com/zjohnsilver/my-fastapi-template).
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white">
+  <img alt="uv"     src="https://img.shields.io/badge/uv-managed-DE5FE9?logo=uv&logoColor=white">
+  <img alt="Ruff"   src="https://img.shields.io/badge/Ruff-lint%20%2B%20format-D7FF64?logo=ruff&logoColor=black">
+  <img alt="pytest" src="https://img.shields.io/badge/pytest-9-0A9EDC?logo=pytest&logoColor=white">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+</p>
 
-## 📁 Layout
+## Dependencies
 
-```
-src/
-  main.py            # entry point, run by `make local/start`
-  core/
-    core_config.py   # settings, read from the environment (.env in development)
-tests/               # mirrors src/, one folder per package
-  test_main.py
-  core/
-    test_core_config.py
-```
+- [uv](https://docs.astral.sh/uv/) — dependency manager; provisions Python and everything in `pyproject.toml`
 
-`src/` and `tests/` are both on the import path (`pythonpath` in `pyproject.toml`), so code
-imports `from core.core_config import load_config`, never `from src.core...`.
+## Setup
 
-## ✅ Requirements
+1. Set up the environment — this copies `env.example` to `.env`, installs the dependencies and
+   sets up the pre-commit hook:
+   ```sh
+   make local/setup
+   ```
 
-- Python 3.12+
-- [uv](https://docs.astral.sh/uv/)
+2. Adjust the values in `.env`.
 
-## 🚀 Setup
+3. Run the project:
+   ```sh
+   make local/start
+   ```
 
-```bash
-make local/setup   # copies env.example to .env, uv sync, installs the pre-commit hook
-make local/start
-```
+## Commands
 
-> Note: the example env file ships as `env.example` (no leading dot), not the more common
-> `.env.example`. Rename it if you prefer that convention. Nothing depends on the dot.
+`make` with no arguments lists every command, straight from the Makefile. The ones you need day
+to day are `make tests`, `make lint/check` and `make lint/format`.
 
-## 🛠️ Commands
+## Starting a project from this template
 
-| Command | What it does |
-| --- | --- |
-| `make local/setup` | Creates `.env`, runs `uv sync`, installs the pre-commit hook |
-| `make local/start` | Runs `src/main.py` |
-| `make tests` | Runs pytest |
-| `make lint/check` / `lint/format` | ruff + mypy |
-| `make lint/pre-commit` | Runs the configured pre-commit hooks |
-
-## 🧩 Using the template
-
-1. Rename the project in `pyproject.toml` (`name`, `description`) and in `APP_NAME`.
+1. Rename the project in `pyproject.toml` (`name`, `description`) and in `env.example`
+   (`APP_NAME`).
 2. Add packages under `src/` and list each one in `[tool.hatch.build.targets.wheel] packages`.
-3. Add dependencies with `uv add <package>` (dev tools with `uv add --dev <package>`).
+3. Add dependencies with `uv add <package>`, dev tools with `uv add --dev <package>`.
+4. Rewrite `CLAUDE.md` and this README for the new project.
+
+## Documentation
+
+Repo conventions (import paths, file naming, tests) live in [`CLAUDE.md`](./CLAUDE.md). It is
+written for coding agents, but it is also the fastest read for a human joining the repo.
