@@ -1,4 +1,4 @@
-<h1 align="center">my-python-template</h1>
+<h1 align="center">🐍 my-python-template</h1>
 
 <p align="center">
   <em>A minimal Python project: <code>src/</code> and <code>tests/</code>, no web framework, no database.</em>
@@ -14,11 +14,11 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
-## Dependencies
+## 📦 Dependencies
 
 - [uv](https://docs.astral.sh/uv/) — dependency manager; provisions Python and everything in `pyproject.toml`
 
-## Setup
+## 🚀 Setup
 
 1. Set up the environment — this copies `env.example` to `.env`, installs the dependencies and
    sets up the pre-commit hook:
@@ -33,12 +33,12 @@
    make local/start
    ```
 
-## Commands
+## 🛠️ Commands
 
 `make` with no arguments lists every command, straight from the Makefile. The ones you need day
 to day are `make tests`, `make lint/check` and `make lint/format`.
 
-## Starting a project from this template
+## 🧩 Starting a project from this template
 
 1. Rename the project in `pyproject.toml` (`name`, `description`) and in `env.example`
    (`APP_NAME`).
@@ -46,7 +46,7 @@ to day are `make tests`, `make lint/check` and `make lint/format`.
 3. Add dependencies with `uv add <package>`, dev tools with `uv add --dev <package>`.
 4. Rewrite `CLAUDE.md` and this README for the new project.
 
-## Documentation
+## 📚 Documentation
 
 Repo conventions (import paths, file naming, tests) live in [`CLAUDE.md`](./CLAUDE.md). It is
 written for coding agents, but it is also the fastest read for a human joining the repo.
